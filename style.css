@@ -7,16 +7,25 @@ body, html {
   color: #00ff00;
 }
 
-/* Full-screen video with 100% opacity */
+/* Full-screen video with proper scaling and support for mobile devices */
 .background-video {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  object-fit: cover; /* Ensures the video scales proportionally to cover the screen */
+  z-index: -1; /* Keeps it behind other elements */
   opacity: 1; /* Full opacity */
+}
+
+/* Fix for Safari and iPhone devices */
+@supports (-webkit-touch-callout: none) {
+  .background-video {
+    height: 100%; /* Safari fix */
+    min-height: 100vh; /* Ensures full coverage */
+    width: auto; /* Maintain aspect ratio */
+  }
 }
 
 /* Centered and abrupt flashing text */
