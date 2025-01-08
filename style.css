@@ -1,0 +1,40 @@
+/* Full-screen styling without background color */
+body, html {
+  margin: 0;
+  overflow: hidden;
+  height: 100%;
+  font-family: monospace;
+  color: #00ff00;
+}
+
+/* Full-screen video with 100% opacity */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 1; /* Full opacity */
+}
+
+/* Centered and abrupt flashing text */
+.flash-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  color: #00ff00;
+  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+  opacity: 1;
+}
+
+/* Abrupt flashing images */
+.flash-image {
+  position: absolute;
+  max-width: 100px;
+  opacity: 1;
+  filter: drop-shadow(0 0 10px #00ff00);
+}
