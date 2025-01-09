@@ -14,13 +14,10 @@ Welcome to the *HYPNO*** project. This setup demonstrates a seamless full-screen
 ## Setup Instructionsand if you want to customise it usong your own words/images/MP4
 
 1. Clone the repository:
-   ```
-   ```bash
-git clone https://github.com/MeanMal/hypno.git
-```
-	2.	Add your video file (video.mp4) to the repository.
-	3.	Create a video.html file to serve the video.
-	4.	Replace the iframe src in index.html with the GitHub Pages URL for video.html.
+   https://github.com/MeanMal/hypno.git
+2. Add your video file (video.mp4) to the repository.
+3. Create a video.html file to serve the video.
+4. Replace the iframe src in index.html with the GitHub Pages URL for video.html.
 
 File Structure
 
