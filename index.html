@@ -3,24 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hypnotic Malverse Page</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Background Video via Iframe</title>
   <style>
-    /* Add styles for the background video */
+    /* Ensure iframe covers the screen */
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100%;
+    }
+
     iframe {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1; /* Keeps the video behind other elements */
-      pointer-events: none; /* Prevents interaction with the video */
+      width: 100vw; /* Full width of the viewport */
+      height: 100vh; /* Full height of the viewport */
+      border: none; /* Remove border */
+      z-index: -1; /* Place behind other content */
+      pointer-events: none; /* Disable interaction with the iframe */
     }
 
-    /* Add styles for containers to ensure they appear on top of the video */
-    #text-container, #image-container {
+    /* Example content over the video */
+    .content {
       position: relative;
-      z-index: 1; /* Ensures they are above the background video */
+      z-index: 1;
       text-align: center;
       color: white;
       font-family: Arial, sans-serif;
@@ -28,22 +35,17 @@
   </style>
 </head>
 <body>
-  <!-- Background video using Vimeo iframe -->
-  <iframe 
-    src="https://player.vimeo.com/video/1044866440?autoplay=1&muted=1&loop=1&background=1" 
-    frameborder="0" 
-    allow="autoplay; fullscreen; picture-in-picture" 
-    allowfullscreen>
+  <!-- Embed video using iframe -->
+  <iframe
+    src="https://raw.githubusercontent.com/your-username/your-repo/main/video.html"
+    allow="autoplay; fullscreen"
+    frameborder="0">
   </iframe>
 
-  <!-- Containers for flashing words and images -->
-  <div id="text-container">
-    <h1>Welcome to Hypnotic Malverse</h1>
+  <!-- Example overlay content -->
+  <div class="content">
+    <h1>Welcome to the Full-Screen Video Page</h1>
+    <p>Enjoy the seamless background video experience!</p>
   </div>
-  <div id="image-container">
-    <img src="example.jpg" alt="Example Image">
-  </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
